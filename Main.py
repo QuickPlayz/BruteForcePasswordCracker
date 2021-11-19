@@ -19,5 +19,6 @@ def guess_password(real):
             if guess == real:
                 endTime = time.time()
                 elapsedtime = endTime - startTime
-                return 'password is {}. found in {} guesses. took {} seconds to crack'.format(guess, attempts, elapsedtime)
+                average = attempts / elapsedtime
+                return 'password {}. {} guesses. took {} seconds. average is {} guesses per second'.format(guess, attempts, elapsedtime, average)
 print(guess_password(I))
