@@ -9,7 +9,7 @@ print('---------------------------')
 
 
 def guess_password(real):
-    chars = string.digits
+    chars = string.ascii_lowercase + string.digits + string.ascii_uppercase
     attempts = 0
     startTime = time.time()
     for password_length in range(1, 9):
